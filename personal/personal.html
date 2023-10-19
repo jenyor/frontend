@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: aliceblue;
+        margin-top: 0;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      header {
+        margin-bottom: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="personal.css" />
+    <title>Task-2</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">F1 DATA</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F1.svg/800px-F1.svg.png"
+        alt="F1 logo"
+        width="20%"
+      />
+      <nav>
+        <a href="#Standings">Standings</a>
+        <a href="#Form">Form</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h1>
+          Hamilton insists Mercedes need 'greatest six months of development
+          we've ever had' to close gap to Red Bull
+        </h1>
+        <img
+          src="https://media.formula1.com/image/upload/t_16by9North/f_auto/q_auto/v1695534246/trackside-images/2023/F1_Grand_Prix_of_Japan/1698188760.jpg.transform/6col/image.jpg"
+          alt="Lewis Hamilton image"
+          width="400"
+        />
+        <p>
+          <b
+            >Lewis Hamilton says Mercedes need to have the “greatest six months
+            of development” in a bid to close the gap to Red Bull ahead of next
+            season, as he backed his squad to show that they are still a "world
+            championship team".</b
+          >
+        </p>
+        <p>
+          Hamilton was speaking after an eventful Japanese GP weekend where he
+          qualified seventh, 1.031s off the pace of pole-sitter Max Verstappen
+          which he admitted was "crazy" and "worrying" before finishing fifth in
+          Sunday's race
+        </p>
+        <p>
+          With Charles Leclerc ahead in fourth, Hamilton had to hold off the
+          other Ferrari of Carlos Sainz across the line – taking the chequered
+          flag 49.376s behind race-winner Verstappen – as the battle for second
+          in the championship intensifies between the Scuderia and Mercedes.
+        </p>
+        <p>
+          Asked how he felt about the race, Hamilton said:
+          <span
+            >“I mean I’m exhausted for one, fighting the car, fighting with
+            absolutely everything I have to get as high up as possible and get
+            ahead of Ferrari, which had an upgrade this week, so they were
+            particularly quick."</span
+          >
+        </p>
+      </article>
+      <aside>
+        <ol type="I">
+          Tags
+          <li>F1</li>
+          <li>Hamilton</li>
+          <li>Japan</li>
+          <li>Mercedes</li>
+        </ol>
+        <a
+          href="https://www.formula1.com/en/latest/article.hamilton-insists-mercedes-need-greatest-six-months-of-development-weve-ever.2suuQ6CusuemwfPV53TTxA.html"
+          target="_blank"
+        >
+          Original article
+        </a>
+      </aside>
+    </main>
+    <table id="Standings">
+      <caption>
+        Результати
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Ім'я</th>
+          <th scope="col">Команда</th>
+          <th scope="col">Позиція</th>
+          <th scope="col">Фінішував</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Max Verstappen</td>
+          <td>Red Bull</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Lando Norris</td>
+          <td>MacLaren</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Oscar Piastri</td>
+          <td>MacLaren</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Alexander Albon</td>
+          <td>Williams</td>
+          <td>13</td>
+          <td rowspan="3">DNF</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Logan Sargeant</td>
+          <td>Williams</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Sergio Pérez</td>
+          <td>Red Bull</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+      <!-- <tfoot>
+        <tr>
+          <td>20</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+          <td>_</td>
+        </tr>
+      </tfoot> -->
+    </table>
+
+    <form action="">
+      <fieldset>
+        <legend id="Form">Форма для відгуків</legend>
+
+        <label for="email">Email:</label>
+        <br />
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="age">Вік:</label>
+        <br />
+        <input type="number" id="age" name="age" required />
+        <br />
+
+        <label for="message">Повідомлення:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+
+        <br />
+        <label for="education">Улюблена команда:</label><br />
+        <select id="education" name="education[]" multiple>
+          <option value="mercedes">Mercedes</option>
+          <option value="redbull">RedBull</option>
+          <option value="redbull">MacLaren</option>
+        </select>
+
+        <br />
+        <label>Оцінка:</label><br />
+        <input
+          type="radio"
+          id="like"
+          name="quality"
+          value="сподобався"
+        />Сподобався
+        <input
+          type="radio"
+          id="needs_work"
+          name="quality"
+          value="потребує доопрацювання"
+        />Потребує доопрацювання
+        <input
+          type="radio"
+          id="incomplete"
+          name="quality"
+          value="неповний"
+        />Несподабався
+
+        <br />
+        <label for="consent">Згода на обробку інформації:</label>
+        <input type="checkbox" id="consent" name="consent" required />
+
+        <br />
+        <button type="submit">Відправити</button>
+      </fieldset>
+    </form>
+
+    <footer>
+      Made using
+      <a href="https://codepen.io/trending" target="_blank">Codepan</a>
+      <br />
+      <a href="https://github.com" target="_blank">src</a>
+    </footer>
+  </body>
+</html>
