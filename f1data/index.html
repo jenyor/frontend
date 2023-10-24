@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>F1 Data</title>
+    <script type="module" src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        loadSeasonsList();
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -22,67 +27,36 @@
             name="years"
             id="championships-list"
             class="caption selection"
-          >
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-          </select>
-          <blockquote
-            cite="https://en.wikipedia.org/wiki/2023_Formula_One_World_Championship"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Sebastian_Vettel_2017_Malaysia_2.jpg/138px-Sebastian_Vettel_2017_Malaysia_2.jpg"
-              alt="Championship Wikipedia image"
-            />
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book...
-              <br />
-              <a
-                href="https://en.wikipedia.org/wiki/2018_Formula_One_World_Championship"
-                target="_blank"
-                >Read more</a
-              >
-            </p>
-          </blockquote>
+            onchange="loadSeasonContent()"
+          ></select>
         </div>
+        <blockquote cite="TODO">
+          <img src="" alt="Championship Wikipedia image" />
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book...
+            <br />
+            <a href="" target="_blank">Read more</a>
+          </p>
+        </blockquote>
 
-        <table>
+        <table id="season-races">
           <thead>
             <tr>
               <th>#</th>
-              <th>Name</th>
+              <th>Race Name</th>
               <th>Circuit</th>
               <th>Date</th>
-              <th>Time</th>
-              <th>Winner</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>name</td>
-              <td>circuit</td>
-              <td>date</td>
-              <td>time</td>
-              <td>winner</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>name</td>
-              <td>circuit</td>
-              <td>date</td>
-              <td>time</td>
-              <td>winner</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
 
       <div>
-        <table style="order: 2">
+        <table style="order: 2" id="driver-standings" class="standings">
           <caption>
             Drivers
           </caption>
@@ -94,23 +68,10 @@
               <th>Points</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>driver</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>driver</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
 
-        <table style="order: 4">
+        <table style="order: 4" id="constructor-standings" class="standings">
           <caption>
             Constructors
           </caption>
@@ -122,38 +83,7 @@
               <th>Points</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>constructor</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>constructor</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>constructor</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>constructor</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>constructor</td>
-              <td>wins</td>
-              <td>points</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </main>

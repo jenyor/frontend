@@ -17,6 +17,7 @@
       }
     </style>
     <link rel="stylesheet" href="personal.css" />
+    <script src="script.js"></script>
     <title>Task-2</title>
   </head>
   <body>
@@ -154,6 +155,25 @@
         </tr>
       </tfoot> -->
     </table>
+
+    <div id="match-letters" style="font-size: 20px">
+      <label for="searchIn">Search in text:</label>
+      <textarea
+        id="searchIn"
+        style="width: 100%"
+        placeholder="Input text..."
+      ></textarea>
+      <br />
+      <label for="searchChars">Search characters:</label>
+      <textarea
+        id="searchChars"
+        style="width: 100%"
+        placeholder="Search symbols..."
+      ></textarea>
+      <br />
+      <button class="search" onclick="match()">Пошук</button>
+      <p class="answer">1</p>
+    </div>
 
     <form action="">
       <fieldset>

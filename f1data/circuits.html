@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>F1 Data</title>
+    <script type="module" src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        loadCircuitsList();
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -18,32 +24,27 @@
     <main>
       <div>
         <div class="input">
-          <input type="text" list="circuits" class="caption" />
-          <datalist id="circuits">
-            <option>Suzuka Circuit</option>
-            <option>Silverstone Circuit</option>
-            <option>Autodromo Nazionale di Monza</option>
-          </datalist>
-        </div>
-        <blockquote cite="https://en.wikipedia.org/wiki/Silverstone_Circuit">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Autodromo_Nazionale_Monza_circuit_logo.png/160px-Autodromo_Nazionale_Monza_circuit_logo.png"
-            alt="Circuit Wikipedia image"
+          <input
+            id="circuit-input"
+            type="text"
+            list="circuits"
+            class="caption"
+            onchange="loadCircuitContent()"
           />
+          <datalist id="circuits"> </datalist>
+        </div>
+        <blockquote cite="TODO">
+          <img src="" alt="Circuit Wikipedia image" />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book... Read more
-            <a
-              href="https://en.wikipedia.org/wiki/Monza_Circuit"
-              target="_blank"
-              >Read more</a
-            >
+            <a href="" target="_blank">Read more</a>
           </p>
         </blockquote>
 
-        <table>
+        <table id="circuits-table">
           <thead>
             <tr>
               <th>#</th>
@@ -54,45 +55,12 @@
               <th>Constructor</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>2023</td>
-              <td>1</td>
-              <td><a href="race_results.html">Italian Grand Prix</a></td>
-              <td>Max Verstappen</td>
-              <td>RedBull</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>2023</td>
-              <td>2</td>
-              <td>Mexican Grand Prix</td>
-              <td>Max Verstappen</td>
-              <td>RedBull</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>2023</td>
-              <td>3</td>
-              <td>Las Vegas Grand Prix</td>
-              <td>Lewis Hamilton</td>
-              <td>Mercedes</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>2023</td>
-              <td>4</td>
-              <td>Baku Grand Prix</td>
-              <td>Max Verstappen</td>
-              <td>RedBull</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
 
       <div>
-        <table>
+        <table id="wins-count" class="standings">
           <caption>
             Wins count
           </caption>
@@ -102,16 +70,7 @@
               <th>Wins</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Lewis Hamilton</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Sebastian Vettel</td>
-              <td>0</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </main>

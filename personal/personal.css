@@ -64,7 +64,7 @@ th~td {
   text-decoration: underline;
 }
 
-p span:first-child {
+article p span:first-child {
   color: orchid;
   font-weight: bold;
   display: block;
@@ -108,4 +108,17 @@ aside>ol {
     flex-direction: column;
     border: 2px solid black;
   }
+}
+
+.search {
+  font-size: 30px;
+}
+
+.answer {
+  display: none;
+  border: 1px solid black;
+}
+
+.highlight {
+  color: red;
 }

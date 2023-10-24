@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>F1 Data</title>
+    <script type="module" src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        loadDriversList();
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -18,32 +24,27 @@
     <main>
       <div>
         <div class="input">
-          <input type="text" list="drivers" class="caption selection" />
-          <datalist id="drivers">
-            <option>Sebastian Vettel</option>
-            <option>Lewis Hamilton</option>
-            <option>Charles Leclerc</option>
-          </datalist>
-        </div>
-        <blockquote cite="https://en.wikipedia.org/wiki/Max_Verstappen">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Charles-Leclerc_%28cropped%29.jpg/220px-Charles-Leclerc_%28cropped%29.jpg"
-            alt="Driver Wikipedia image"
+          <input
+            id="driver-input"
+            type="text"
+            list="drivers"
+            class="caption selection"
+            onchange="loadDriverContent()"
           />
+          <datalist id="drivers"> </datalist>
+        </div>
+        <blockquote cite="TODO">
+          <img src="" alt="Driver Wikipedia image" />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book...
-            <a
-              href="https://en.wikipedia.org/wiki/2018_Formula_One_World_Championship"
-              target="_blank"
-              >Read more</a
-            >
+            <a href="" target="_blank">Read more</a>
           </p>
         </blockquote>
 
-        <table>
+        <table id="driver-races">
           <caption>
             All races
           </caption>
@@ -59,48 +60,16 @@
               <th>Points</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>season</td>
-              <td>round</td>
-              <td>circuit</td>
-              <td>constructor</td>
-              <td>grid</td>
-              <td>pos</td>
-              <td>points</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
 
       <div>
-        <table class="vertical">
+        <table id="driver-stats" class="vertical">
           <caption>
             Statistics
           </caption>
-          <tbody>
-            <tr>
-              <th>Wins</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th>Runner-up</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th>Third</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th>Top 10</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th>All</th>
-              <td>0</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </main>
